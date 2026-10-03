@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Академия женской психологии - Презентация</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        .text-maroon {
+            color: #90535e;
+        }
+        .bg-pink-card {
+            background: linear-gradient(135deg, #feeae7 0%, #ffe8df 100%);
+        }
+        .border-pink-accent {
+            border-top-width: 6px;
+            border-top-color: #f1b6c0;
+        }
+        /* Navigation & Fullscreen */
+        .controls-container {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            z-index: 50;
+        }
+        .nav-btn {
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .nav-btn:hover {
+            background: #e2e8f0;
+        }
+        .fullscreen-btn {
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            padding: 0.75rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fullscreen-btn:hover {
+            background: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Слайд 1 -->
+    <div class="slide active text-center">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-maroon mb-8 leading-tight">Академия<br>женской психологии</h1>
+        <p class="text-xl md:text-2xl text-gray-700 font-medium">Добро пожаловать в команду 🎉</p>
+    </div>
+
+    <!-- Слайд 2 -->
+    <div class="slide text-center md:px-24">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-maroon mb-16 max-w-5xl leading-tight">
+            Почему Академия женской психологии — это круто?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl">
+            <div class="bg-pink-card p-10 rounded-2xl border border-red-50/50 shadow-md flex flex-col items-center">
+                <div class="text-6xl mb-6">🎓</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Топовое образование</h3>
+                <p class="text-gray-700 leading-relaxed text-lg text-center">Достойное обучение в сфере женской психологии и сексологии от лучших специалистов индустрии</p>
+            </div>
+            <div class="bg-pink-card p-10 rounded-2xl border border-red-50/50 shadow-md flex flex-col items-center">
+                <div class="text-6xl mb-6">💡</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Монетизация знаний</h3>
+                <p class="text-gray-700 leading-relaxed text-lg text-center">Не только обучаем — помогаем ученикам зарабатывать на своих знаниях и навыках</p>
+            </div>
+            <div class="bg-pink-card p-10 rounded-2xl border border-red-50/50 shadow-md flex flex-col items-center">
+                <div class="text-6xl mb-6">📜</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Официальная лицензия</h3>
+                <p class="text-gray-700 leading-relaxed text-lg text-center">Лицензия на образовательную деятельность. По итогу — диплом установленного образца</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Слайд 3 -->
+    <div class="slide text-center md:px-24">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-maroon mb-12">Менеджер первой линии (МПЛ)</h2>
+        
+        <!-- Контурное сердечко -->
+        <div class="w-40 h-40 bg-[#feeae7] rounded-full flex items-center justify-center mb-10 shadow-inner border-4 border-white mx-auto relative">
+            <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#90535e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-md border-pink-accent flex flex-col items-center">
+                <div class="text-5xl mb-4">🎯</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Ваша роль</h3>
+                <p class="text-gray-600 text-lg">Первый человек, который связывается с клиентом — <span class="font-bold text-gray-800">очень важное звено в компании</span></p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-md border-pink-accent flex flex-col items-center">
+                <div class="text-5xl mb-4">🛠️️</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Инструменты</h3>
+                <p class="text-gray-600 text-lg">Удобная CRM Bitrix 24, простой и понятный скрипт, горячие заявки</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-md border-pink-accent flex flex-col items-center">
+                <div class="text-5xl mb-4">✅</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Цель</h3>
+                <p class="text-gray-600 text-lg">Качественно записать клиента <span class="font-bold text-gray-800">на бесплатную встречу</span> с экспертом школы</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Слайд 4 -->
+    <div class="slide text-center md:px-24">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-maroon mb-16">График и функционал</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-6xl">
+            
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
+                <div class="bg-[#feeae7] p-5 rounded-full mb-6">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d98997" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">График</h3>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    5/2, с <span class="font-bold text-gray-900">9:00 до 18:00</span> по МСК<br>
+                    Выходные плавающие<br>
+                    Перерыв — 1 час (можно делить)
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
+                <div class="bg-[#feeae7] p-5 rounded-full mb-6">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d98997" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Функционал</h3>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Работа с заявками — новые заявки всегда <span class="font-bold text-gray-900">приоритет №1</span>, далее работаем по тёплой базе
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
+                <div class="bg-[#feeae7] p-5 rounded-full mb-6">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d98997" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">План</h3>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    <span class="font-bold text-gray-900">12 записей</span> в день<br>
+                    Ориентир активности — <span class="font-bold text-gray-900">300 звонков</span> в день
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
+                <div class="bg-[#feeae7] p-5 rounded-full mb-6">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d98997" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line><line x1="3" y1="20" x2="21" y2="20"></line></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Отчёты</h3>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Делаем небольшие отчеты в течение дня, чтобы четко контролировать ситуацию
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Слайд 5 -->
+    <div class="slide text-center items-center">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-maroon mb-16">Давайте познакомимся</h2>
+        <div class="flex flex-col md:flex-row w-full max-w-6xl bg-[#fceceb] rounded-3xl border border-[#fadcd9] shadow-md divide-y md:divide-y-0 md:divide-x divide-[#fadcd9]">
+            
+            <div class="flex-1 p-10 flex flex-col items-center">
+                <div class="text-6xl mb-6">👤</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Расскажите о себе</h3>
+                <p class="text-gray-700 text-lg text-center leading-relaxed">Кто вы, откуда, чем занимались раньше и чем увлекаетесь?</p>
+            </div>
+            
+            <div class="flex-1 p-10 flex flex-col items-center">
+                <div class="text-6xl mb-6">💼</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Ваш опыт</h3>
+                <p class="text-gray-700 text-lg text-center leading-relaxed">Что умеете, где работали, какие профессиональные навыки прокачали?</p>
+            </div>
+            
+            <div class="flex-1 p-10 flex flex-col items-center">
+                <div class="text-6xl mb-6">✨</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Что вдохновляет</h3>
+                <p class="text-gray-700 text-lg text-center leading-relaxed">Что заряжает вас энергией и мотивирует двигаться вперёд каждый день?</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Слайд 6 -->
+    <div class="slide items-center text-center">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-maroon mb-16">Условия и доход</h2>
+        
+        <div class="flex flex-col md:flex-row justify-center gap-16 w-full max-w-5xl mb-16">
+            <div class="flex flex-col items-center">
+                <h3 class="text-2xl font-bold text-gray-500 uppercase tracking-wide mb-4">Базовая часть</h3>
+                <p class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Фикс 20к + Бонусы</p>
+                <div class="bg-[#feeae7] px-6 py-3 rounded-full inline-block">
+                    <p class="text-gray-900 text-lg font-bold">🎁 Бонус за каждого дошедшего клиента + KPI</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col items-center">
+                <h3 class="text-2xl font-bold text-gray-500 uppercase tracking-wide mb-4">Доход МПЛ</h3>
+                <p class="text-gray-700 text-xl leading-relaxed">
+                    На старте – <span class="font-bold text-3xl text-maroon mx-1">35 000</span> ₽<br>
+                    Средний результат – <span class="font-bold text-3xl text-maroon mx-1">60 000</span> ₽<br>
+                    ТОП-сотрудник – <span class="font-bold text-3xl text-maroon mx-1">100 000</span> ₽
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-md border-pink-accent flex flex-col items-center">
+                <div class="text-5xl mb-4">🏦</div>
+                <h4 class="text-2xl font-bold text-gray-800 mb-4">Выплаты</h4>
+                <p class="text-gray-600 text-lg">Только на карту <span class="font-bold text-gray-900">Альфа-Банк РФ</span></p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-md border-pink-accent flex flex-col items-center">
+                <div class="text-5xl mb-4">📅</div>
+                <h4 class="text-2xl font-bold text-gray-800 mb-4">График выплат</h4>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Аванс 5 000 ₽ — с 16 по 20<br>
+                    Полная выплата — с 5 по 10
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-md border-pink-accent flex flex-col items-center">
+                <div class="text-5xl mb-4">📋</div>
+                <h4 class="text-2xl font-bold text-gray-800 mb-4">Трудоустройство</h4>
+                <p class="text-gray-600 text-lg">Неофициальное</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Слайд 7 -->
+    <div class="slide items-center text-center md:px-24">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-maroon mb-16">Обучение и адаптация</h2>
+        
+        <!-- Новый четкий таймлайн без пересечений -->
+        <div class="relative w-full max-w-5xl mt-8 mb-16">
+            <!-- Красная линия на фоне -->
+            <div class="absolute top-8 left-0 w-full h-1.5 bg-[#f00018] z-0 opacity-80 rounded-full"></div>
+            
+            <div class="relative z-10 flex justify-between items-start w-full">
+                <!-- Узел 1 -->
+                <div class="flex flex-col items-center w-1/3 px-4">
+                    <div class="w-16 h-16 rounded-full bg-[#f00018] text-white flex items-center justify-center text-3xl font-bold shadow-lg border-4 border-white mb-6">1</div>
+                    <h3 class="text-2xl font-bold text-maroon mb-3">День 1</h3>
+                    <p class="text-lg text-gray-700 text-center leading-relaxed">Теория и практика<br>вместе с тренером</p>
+                </div>
+                <!-- Узел 2 -->
+                <div class="flex flex-col items-center w-1/3 px-4">
+                    <div class="w-16 h-16 rounded-full bg-[#f00018] text-white flex items-center justify-center text-3xl font-bold shadow-lg border-4 border-white mb-6">2</div>
+                    <h3 class="text-2xl font-bold text-maroon mb-3">День 2</h3>
+                    <p class="text-lg text-gray-700 text-center leading-relaxed">Выход на линию,<br>тренер помогает освоиться</p>
+                </div>
+                <!-- Узел 3 -->
+                <div class="flex flex-col items-center w-1/3 px-4">
+                    <div class="w-16 h-16 rounded-full bg-[#f00018] text-white flex items-center justify-center text-3xl font-bold shadow-lg border-4 border-white mb-6">3</div>
+                    <h3 class="text-2xl font-bold text-maroon mb-3">День 3</h3>
+                    <p class="text-lg text-gray-700 text-center leading-relaxed">Ты полностью в строю,<br>часть нашей команды!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w-full max-w-4xl mt-8 bg-[#bbf7d0] rounded-2xl p-6 flex flex-col md:flex-row items-center justify-center gap-4 shadow-sm border border-[#86efac]">
+            <div class="bg-white p-3 rounded-full">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <p class="text-green-900 font-bold text-xl text-center md:text-left">
+                Быстрый старт: всего 2 дня обучения — и на 3-й день ты уже в штате!
+            </p>
+        </div>
+    </div>
+
+    <!-- Навигация и кнопка во весь экран -->
+    <div class="controls-container">
+        <button class="nav-btn" onclick="prevSlide()">&#8592; Назад</button>
+        <span id="slide-counter" class="text-lg font-bold text-gray-500">1 / 7</span>
+        <button class="nav-btn" onclick="nextSlide()">Вперед &#8594;</button>
+    </div>
+
+    <button class="fullscreen-btn" id="fs-btn" onclick="toggleFullscreen()" title="На весь экран">
+        <svg id="fs-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+        </svg>
+    </button>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const counter = document.getElementById('slide-counter');
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            counter.innerText = (currentSlide + 1) + ' / ' + slides.length;
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        // Управление клавиатурой и кликами
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+
+        // Полноэкранный режим
+        function toggleFullscreen() {
+            const fsIcon = document.getElementById('fs-icon');
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+                fsIcon.innerHTML = '<path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>';
+            } else {
+                document.exitFullscreen();
+                fsIcon.innerHTML = '<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>';
+            }
+        }
+
+        document.addEventListener('fullscreenchange', () => {
+            const fsIcon = document.getElementById('fs-icon');
+            if (!document.fullscreenElement) {
+                fsIcon.innerHTML = '<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>';
+            }
+        });
+    </script>
+</body>
+</html>
